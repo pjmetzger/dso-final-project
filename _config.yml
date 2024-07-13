@@ -1,4 +1,11 @@
-title: Paul's Sample Blog
+title: My Sailing Adventures
+description: >- # this means to ignore newlines until "baseurl:"
+  This is the homework assignment for Coursera "Introduction to DevSecOps",
+  module 4. This website is about various sailing adventures I've 
+  had, including on my own boat, a 2013 Hunter 33 monohull.
+baseurl: "" # the subpath of your site, e.g. /blog
+github_username:  pjmetzger
+
 # theme: minima
 # remote_theme: pages-themes/cayman@v0.2.0
 remote_theme: pages-themes/architect@v0.2.0
