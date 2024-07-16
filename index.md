@@ -17,7 +17,7 @@ In `index.md` line 22 is commented out. The code is:
 
 `This should be a broken link to [https://this.doesnotexist.com](https://this.doesnotexist.com/)`
 
-If you want to test the link checker, uncomment line 22 and do a pull request
+_If you want to test the link checker, uncomment line 22 (remove "\<\?" and "\?\>") and do a pull request_
 
-This should be a broken link to [https://this.doesnotexist.com](https://this.doesnotexist.com/)
+<? This should be a broken link to [https://this.doesnotexist.com](https://this.doesnotexist.com/) ?>
 
