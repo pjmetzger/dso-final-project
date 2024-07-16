@@ -12,6 +12,8 @@ on:
   workflow_dispatch:
 
 jobs:
+  # Run Lychee Broken Link Checker from
+  # https://github.com/marketplace/actions/lychee-broken-link-checker
   linkChecker:
     runs-on: ubuntu-latest
     steps:
