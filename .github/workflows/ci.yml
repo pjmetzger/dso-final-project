@@ -12,19 +12,17 @@ on:
   workflow_dispatch:
 
 jobs:
-  broken_link_checker_job:
+  linkChecker:
     runs-on: ubuntu-latest
-    name: Check for broken links
     steps:
-      - name: Check for broken links
-        id: link-report
-        uses: celinekurpershoek/link-checker@v1.0.2
+      - uses: actions/checkout@v4
+      
+      - name: Link Checker
+        uses: lycheeverse/lychee-action@v1
         with:
-          # Required:
-          url: "https://..."
-          # optional:
-          honorRobotExclusions: false
-          ignorePatterns: "github,google"
-          recursiveLinks: true # Check all URLs on all reachable pages (could take a while)
-      - name: Get the result
-        run: echo "${{steps.link-report.outputs.result}}"
+          # Check all markdown, html and reStructuredText files in repo (default)
+          args: --base . --verbose --no-progress './**/*.md' './**/*.html' './**/*.rst'
+          # Use different output file path
+          output: /tmp/foo.txt
+          # Fail action on broken links
+          fail: true
