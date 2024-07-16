@@ -13,4 +13,4 @@ title: My Sailing Adventures
 
 5. One of my favorite destinations is the [British Virgin Islands](bvi/)
 
-6. This should be a [broken link to nowhere](devnull)
+6. This should be a [broken link to nowhere](https://this.doesnotexist.com/)
