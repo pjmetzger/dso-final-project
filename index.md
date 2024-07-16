@@ -13,4 +13,11 @@ title: My Sailing Adventures
 
 5. One of my favorite destinations is the [British Virgin Islands](bvi/)
 
-6. This should be a [broken link to nowhere](https://this.doesnotexist.com/)
+In `index.md` line 22 is commented out. The code is:
+
+`This should be a broken link to [https://this.doesnotexist.com](https://this.doesnotexist.com/)`
+
+If you want to test the link checker, uncomment line 22 and do a pull request
+
+This should be a broken link to [https://this.doesnotexist.com](https://this.doesnotexist.com/)
+
