@@ -12,3 +12,5 @@ title: My Sailing Adventures
 4. Last summer we [sailed in Maine](maine/), up to Bar Harbor
 
 5. One of my favorite destinations is the [British Virgin Islands](bvi/)
+
+6. This should be a [broken link to nowhere](https://this.doesnotexist.com/)
