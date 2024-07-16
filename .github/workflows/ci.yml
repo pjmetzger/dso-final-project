@@ -12,12 +12,19 @@ on:
   workflow_dispatch:
 
 jobs:
-  my-broken-link-checker:
-    name: Check broken links
+  broken_link_checker_job:
     runs-on: ubuntu-latest
+    name: Check for broken links
     steps:
-      - name: Check
-        uses: ruzickap/action-my-broken-link-checker@v2
+      - name: Check for broken links
+        id: link-report
+        uses: celinekurpershoek/link-checker@v1.0.2
         with:
-          url: https://www.mkdocs.org
-          cmd_params: "--one-page-only --max-connections=3 --color=always"  # Check just one page
+          # Required:
+          url: "https://..."
+          # optional:
+          honorRobotExclusions: false
+          ignorePatterns: "github,google"
+          recursiveLinks: false # Check all URLs on all reachable pages (could take a while)
+      - name: Get the result
+        run: echo "${{steps.link-report.outputs.result}}"
